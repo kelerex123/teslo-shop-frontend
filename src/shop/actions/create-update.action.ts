@@ -32,7 +32,7 @@ export const createUpdateAction = async (productLike: Partial<Product> & { files
         method: isCreating ? 'POST' : 'PATCH',
         data: {
             ...rest,
-            images,
+            images: images.map(image => image.split('/').pop()),
         },
     })
 
@@ -60,9 +60,7 @@ const uploadFiles = async (files: File[]): Promise<string[]> => {
             data: formData,
         })
 
-        const splitString = data.fileName.split('/')
-
-        return splitString[splitString.length - 1];
+        return data.fileName;
 
     })
 
