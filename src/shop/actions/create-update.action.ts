@@ -14,6 +14,7 @@ export const createUpdateAction = async (productLike: Partial<Product> & { files
     const { id, user, images = [], files = [], ...rest } = productLike;
 
     console.log({ files })
+    console.log({ images })
 
     const isCreating = id === 'new';
 
