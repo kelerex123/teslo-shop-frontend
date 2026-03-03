@@ -12,6 +12,8 @@ export const AdminProductsPage = () => {
 
     const { data } = useProducts();
 
+    console.log({ data });
+
     if (!data) return;
 
     return (
