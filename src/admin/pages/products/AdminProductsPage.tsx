@@ -3,7 +3,6 @@ import { CustomPagination } from "@/components/custom/CustomPagination"
 import { Button } from "@/components/ui/button"
 import { TableHeader, TableRow, TableHead, TableBody, TableCell, Table } from "@/components/ui/table"
 import { currencyFormatter } from "@/lib/currencyFormatter"
-import { products } from "@/mock/products.mock"
 import { useProducts } from "@/shop/hooks/useProducts"
 import { PencilIcon, PlusIcon } from "lucide-react"
 import { Link } from "react-router"
@@ -44,7 +43,7 @@ export const AdminProductsPage = () => {
                 </TableHeader>
                 <TableBody>
                     {
-                        data?.products.map((product, index) => (
+                        data?.products.map((product) => (
                             <TableRow key={product.id}>
                                 <TableCell>
                                     <img

@@ -1,6 +1,5 @@
 import { createUpdateAction } from "@/shop/actions/create-update.action";
 import { getProductByIdAction } from "@/shop/actions/get-product-by-id.action";
-import type { Product } from "@/types/product.interface";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query"
 
 

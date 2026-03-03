@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { Search, Bell, MessageSquare, Settings } from 'lucide-react';
-import { useNavigate, useSearchParams } from 'react-router';
+import { useNavigate } from 'react-router';
 
 export const AdminHeader: React.FC = () => {
 
